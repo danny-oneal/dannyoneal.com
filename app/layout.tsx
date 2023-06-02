@@ -3,17 +3,18 @@ import { Inter } from "@next/font/google";
 import LocalFont from "@next/font/local";
 import { Metadata } from "next";
 import { Analytics } from "./components/analytics";
+import NavBar from "./components/nav-bar";
 
 export const metadata: Metadata = {
 	title: {
 		default: "dannyoneal.com",
 		template: "%s | dannyoneal.com",
 	},
-	description: "Software engineer at upstash.com and founder of planetfall.io",
+	description: "Software Engineer and Web Designer",
 	openGraph: {
 		title: "dannyoneal.com",
 		description:
-			"Software engineer at upstash.com and founder of planetfall.io",
+			"Software Engineer and Web Designer",
 		url: "https://dannyoneal.com",
 		siteName: "dannyoneal.com",
 		images: [
@@ -69,6 +70,7 @@ export default function RootLayout({
 				className={`bg-white ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
 					}`}
 			>
+				<NavBar />
 				{children}
 			</body>
 		</html>
